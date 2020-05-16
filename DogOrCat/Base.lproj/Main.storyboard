@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DogOrCat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap below to select an image:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK3-JW-nEL">
+                                <rect key="frame" x="16" y="249.33333333333337" width="359" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-DD-Glu">
+                                <rect key="frame" x="16" y="538.66666666666663" width="359" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <state key="normal" title="Is it a cat or a dog?"/>
+                                <connections>
+                                    <action selector="checkAnimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nrk-il-Eu3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0U-1d-baL">
+                                <rect key="frame" x="16" y="614.66666666666663" width="359" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogcat" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-dj-mo2">
+                                <rect key="frame" x="0.0" y="285.33333333333331" width="375" height="241.33333333333331"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Mj-dj-mo2" secondAttribute="height" multiplier="14:9" id="6oD-eK-VnJ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5me-wP-nhp" appends="YES" id="7Z9-n5-mKb"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog or Cat?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="eAt-4d-hLh">
+                                <rect key="frame" x="0.0" y="53.999999999999993" width="375" height="101.33333333333331"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dK3-JW-nEL" secondAttribute="trailing" id="A2w-UY-QCI"/>
+                            <constraint firstItem="9Mj-dj-mo2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ATg-Mi-A5Q"/>
+                            <constraint firstItem="EL4-DD-Glu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Fw4-MD-WsQ"/>
+                            <constraint firstItem="eAt-4d-hLh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PG6-8W-UfJ"/>
+                            <constraint firstItem="g0U-1d-baL" firstAttribute="top" secondItem="EL4-DD-Glu" secondAttribute="bottom" constant="40" id="SiM-Wh-HMx"/>
+                            <constraint firstAttribute="trailing" secondItem="9Mj-dj-mo2" secondAttribute="trailing" id="Zu2-B8-Ww1"/>
+                            <constraint firstItem="eAt-4d-hLh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fSk-JG-RpT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EL4-DD-Glu" secondAttribute="trailing" id="iFM-eb-w84"/>
+                            <constraint firstItem="dK3-JW-nEL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kRV-Dj-nsB"/>
+                            <constraint firstItem="g0U-1d-baL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l6m-fi-Ci2"/>
+                            <constraint firstItem="EL4-DD-Glu" firstAttribute="top" secondItem="9Mj-dj-mo2" secondAttribute="bottom" constant="12" id="qyJ-cT-jER"/>
+                            <constraint firstItem="9Mj-dj-mo2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tPR-xW-wKv"/>
+                            <constraint firstItem="9Mj-dj-mo2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uZQ-0c-psY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eAt-4d-hLh" secondAttribute="trailing" id="vXF-32-uM8"/>
+                            <constraint firstAttribute="trailing" secondItem="g0U-1d-baL" secondAttribute="trailing" id="w3Q-FN-C5m"/>
+                            <constraint firstItem="9Mj-dj-mo2" firstAttribute="top" secondItem="dK3-JW-nEL" secondAttribute="bottom" constant="12" id="z3x-8w-f3H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkAnimalButton" destination="EL4-DD-Glu" id="nU8-c7-9FX"/>
+                        <outlet property="classificationLabel" destination="g0U-1d-baL" id="Nsc-iz-PMu"/>
+                        <outlet property="imageView" destination="9Mj-dj-mo2" id="uP3-19-0hd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5me-wP-nhp">
+                    <connections>
+                        <action selector="selectImageSource:" destination="BYZ-38-t0r" id="9XA-wy-VWf"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="18.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dogcat" width="587.66668701171875" height="378.33334350585938"/>
+    </resources>
+</document>
